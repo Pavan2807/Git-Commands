@@ -1,0 +1,105 @@
+Git and Github:
+
+Git is a version control system that helps to track the chnages in the code
+Free and Open Source
+Fast and Scalable
+
+Github is a website that allows the developers to store and manage their code using git
+
+
+git --version
+
+Intitial configuration to connect to the repository:
+git config --global user.name "Pavan2807" 
+git config --global user.email "patilpavan4321@gmail.com"
+git config --list
+
+Cloning the existing repository to local:
+git clone 'repo_url'  -->  git clone https://github.com/Pavan2807/Project1.git
+
+git status
+Git tracks the existing/new files status as below :
+Untracked: When new file is created
+modified : When changes are made in existing file
+staged: Chnages are ready to commit
+Unmodified : No changes made in existing file
+
+Add: Adds new/changed files in your directory to git staging area
+git add 'filename' 
+
+Commit: Commits the changes into repository
+git commit -m "some message"
+
+push command: Upload local repository content to the remote repository
+git push origin master
+
+
+Creating a new repository and pushing the code:
+git init  -> creates a empty git repository in the local machine
+
+git remote add origin 'link' --> Add a new remote repository
+
+git remote -v --> Verify the new remote
+
+git remote set-url  --> changes an existing remote repository URL
+
+git branch  --> Check the current branch
+
+git branch -M 'name' --> Rename the branch
+
+git push origin main  --> Push the local repo to remote repo
+
+git push -u origin main --> Always push changes to the remote repo main branch and git push will directly push chnages to that branch
+
+
+Existing Repo :
+Clone the remote repo to the local
+Make changes in local repository
+Add the changes to the local repository
+Commit the changes in local repository
+Push the changes to remote repository
+
+Branches:
+git branch --> Check the current branch
+git checkout <branch name> --> Navigate the branches
+git checkout -b < new branch name> --> create a new branch
+git branch -d <branch name>  --> delete the branch[ Cannot delete the branch on which we exit]
+
+
+Merging: [ Merge data from different branches to main branch]
+
+Way1:
+git diff <branch name>  -> to compare the commits, branches,files
+git merge <branch name> -> to merge 2 branches 
+
+way2:
+creating a pull request in github
+pull request tells others about changes you have pushed to a branch in a repo on github
+
+
+git pull origin main -> Pull request to fetch and download changes from remote repo to local repo
+
+
+Merge conflicts:
+An event that take place when git is unable to automatically resolve differences in code between two commits
+Accept current change
+Accept Incoming change
+Accept both changes
+
+
+Undoing the changes:
+Staged changes:
+git reset <file name>  --> TO unstage changes in a file
+git reset --> TO unstage the chnages in multiple files
+
+Committed changes:
+git reset HEAD~1  --> To uncommit changes done in the last commit
+
+Committed changes for many commits:
+git reset <commit hash>
+git reset --hard <commit hash>
+
+
+Fork: create a duplicate repository from the existing repository
+A fork is a new repo that shares the code and visibility settings with original upstream repository[A rough copy]
+
